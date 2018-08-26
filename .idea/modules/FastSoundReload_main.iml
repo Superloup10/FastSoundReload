@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.8">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/main" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="FastSoundReload" />
+          <option name="jvmTarget" value="1.8" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+    <facet type="minecraft" name="Minecraft">
+      <configuration>
+        <autoDetectTypes>
+          <platformType>FORGE</platformType>
+          <platformType>MCP</platformType>
+        </autoDetectTypes>
+      </configuration>
+    </facet>
+  </component>
+  <component name="McpModuleSettings">
+    <option name="mappingFiles">
+      <set>
+        <option value="D:\Superloup10\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\mcp-srg.srg" />
+        <option value="D:\Superloup10\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\mcp.exc" />
+        <option value="D:\Superloup10\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\mcp-notch.srg" />
+        <option value="D:\Superloup10\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\srg.exc" />
+        <option value="D:\Superloup10\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\notch-srg.srg" />
+        <option value="D:\Superloup10\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20180814\1.12.2\srgs\notch-mcp.srg" />
+      </set>
+    </option>
+    <option name="mcpVersion" value="snapshot_20180814" />
+    <option name="minecraftVersion" value="1.12.2" />
+  </component>
+</module>
