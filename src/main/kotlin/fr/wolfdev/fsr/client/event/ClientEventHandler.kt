@@ -13,7 +13,7 @@ object ClientEventHandler {
     @JvmStatic
     @SubscribeEvent
     fun keyInput(event: InputEvent.KeyInputEvent) {
-        if (FastSoundReload.SOUND_KEY.isPressed)
-            FMLClientHandler.instance().refreshResources(VanillaResourceType.SOUNDS)
+        /*if (FastSoundReload.SOUND_KEY.isPressed)
+            FMLClientHandler.instance().refreshResources(VanillaResourceType.SOUNDS)*/
     }
 }

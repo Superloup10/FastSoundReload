@@ -1,0 +1,9 @@
+{
+  "package": "fr.wolfdev.fsr.client.mixin",
+  "refmap": "mixins.fsr.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinMinecraft"
+  ]
+}
