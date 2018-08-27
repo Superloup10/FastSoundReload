@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import org.apache.logging.log4j.Logger
 import org.lwjgl.input.Keyboard
 
-@Mod(modid = FastSoundReload.MODID, name = FastSoundReload.NAME, version = "@VERSION@", acceptedMinecraftVersions = "@MCVERSION@", modLanguageAdapter = "net.shadowfacts.forgelin.KotlinAdapter", dependencies = "required-after:forgelin;", clientSideOnly = true)
+@Mod(modid = FastSoundReload.MODID, name = FastSoundReload.NAME, version = "@VERSION@", acceptedMinecraftVersions = "@MCVERSION@", modLanguageAdapter = "net.shadowfacts.forgelin.KotlinAdapter", dependencies = "required-after:forge[14.23.4.2742,);required-after:forgelin;", clientSideOnly = true)
 object FastSoundReload {
     const val MODID = "fsr"
     const val NAME = "FastSoundReload"

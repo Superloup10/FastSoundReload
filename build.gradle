@@ -51,7 +51,7 @@ repositories {
 }
 
 dependencies {
-    compile "net.shadowfacts:Forgelin:1.6.0"
+    compile "net.shadowfacts:Forgelin:1.7.3"
     compile "org.jetbrains.kotlin:kotlin-stdlib"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile "org.jetbrains.kotlin:kotlin-reflect"
