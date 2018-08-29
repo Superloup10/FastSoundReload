@@ -1,6 +1,7 @@
 package fr.wolfdev.fsr.client
 
 import net.minecraft.client.settings.KeyBinding
+import net.minecraftforge.client.settings.KeyConflictContext
 import net.minecraftforge.client.settings.KeyModifier
 import net.minecraftforge.fml.client.registry.ClientRegistry
 import net.minecraftforge.fml.common.Mod
@@ -14,12 +15,11 @@ object FastSoundReload {
     const val NAME = "FastSoundReload"
     lateinit var logger: Logger
 
-    val SOUND_KEY = KeyBinding("key.sound", Keyboard.KEY_H, "key.categories.misc")
+    val SOUND_KEY = KeyBinding("key.sound", KeyConflictContext.IN_GAME, KeyModifier.CONTROL, Keyboard.KEY_H, "key.categories.misc")
 
     @Mod.EventHandler
     fun preInit(event: FMLPreInitializationEvent) {
         logger = event.modLog
-        SOUND_KEY.setKeyModifierAndCode(KeyModifier.CONTROL, Keyboard.KEY_H)
         ClientRegistry.registerKeyBinding(SOUND_KEY)
     }
 }
