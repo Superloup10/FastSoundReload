@@ -14,12 +14,11 @@ object FastSoundReload {
     const val NAME = "FastSoundReload"
     lateinit var logger: Logger
 
-    val SOUND_KEY = KeyBinding("key.sound", Keyboard.KEY_H, "key.categories.misc")
+    val SOUND_KEY = KeyBinding("key.sound", Keyboard.KEY_S, "key.categories.misc")
 
     @Mod.EventHandler
     fun preInit(event: FMLPreInitializationEvent) {
         logger = event.modLog
-        SOUND_KEY.setKeyModifierAndCode(KeyModifier.CONTROL, Keyboard.KEY_H)
         ClientRegistry.registerKeyBinding(SOUND_KEY)
     }
 }

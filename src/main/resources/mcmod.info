@@ -2,7 +2,7 @@
   {
     "modid": "fsr",
     "name": "FastSoundReload",
-    "description": "",
+    "description": "Reload only sound system",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
@@ -11,7 +11,7 @@
       "Superloup10"
     ],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "logo.png",
     "screenshots": [],
     "dependencies": []
   }

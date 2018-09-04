@@ -14,16 +14,18 @@ buildscript {
         classpath "net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'org.spongepowered:mixingradle:0.6-SNAPSHOT'
+        classpath "com.github.jengelman.gradle.plugins:shadow:2.0.4"
     }
 }
 
 project.ext.buildnumber = 0
 version = mod_version
 
-
 apply plugin: "kotlin"
+apply plugin: "idea"
 apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: 'org.spongepowered.mixin'
+apply plugin: "com.github.johnrengelman.shadow"
 
 targetCompatibility = JavaVersion.VERSION_1_8
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -44,10 +46,6 @@ minecraft {
 }
 
 idea { module { inheritOutputDirs = true } }
-
-mixin {
-    add sourceSets.main, "mixins.fsr.refmap.json"
-}
 
 repositories {
     maven {
@@ -70,12 +68,25 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile "org.jetbrains.kotlin:kotlin-reflect"
     compile "org.jetbrains.kotlin:kotlin-runtime"
-    compile('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
-        exclude module: 'asm-commons'
-        exclude module: 'asm-tree'
-        exclude module: 'launchwrapper'
-        exclude module: 'guava'
-        exclude module: 'log4j-core'
+    implementation('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
+        exclude module: "asm-commons"
+        exclude module: "asm-tree"
+        exclude module: "launchwrapper"
+        exclude module: "guava"
+        exclude module: "log4j-core"
+        exclude module: "gson"
+        exclude module: "commons-io"
+    }
+}
+
+mixin {
+    defaultObfuscationEnv searge
+    add sourceSets.main, "mixins.fsr.refmap.json"
+}
+
+reobf {
+    shadowJar {
+        mappingType = "SEARGE"
     }
 }
 
@@ -98,6 +109,21 @@ jar {
     manifest.attributes(
             'TweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
             'MixinConfigs': 'mixins.fsr.json',
+            "FMLCorePlugin": "fr.wolfdev.asm.FSRLoadingPlugin",
             'FMLCorePluginContainsFMLMod': 'true',
+            'ForceLoadAsMod': 'true'
     )
+}
+
+shadowJar {
+    dependsOn reobfJar
+    classifier ""
+    exclude "LICENSE.txt", "dummyThing"
+    dependencies {
+        include dependency('org.spongepowered:mixin')
+    }
+}
+
+artifacts {
+    archives shadowJar
 }
