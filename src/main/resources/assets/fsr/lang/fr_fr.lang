@@ -1,2 +1,3 @@
+debug.reload_sound.help=F3 + %s = Recharger le système de son
 debug.reload_sound.message=Rechargement du système de son terminé avec succes !
 key.sound=Recharger le système de son

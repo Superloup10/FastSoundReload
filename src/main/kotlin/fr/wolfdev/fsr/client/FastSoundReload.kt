@@ -15,7 +15,7 @@ object FastSoundReload {
     const val NAME = "FastSoundReload"
     lateinit var logger: Logger
 
-    val SOUND_KEY = KeyBinding("key.sound", KeyConflictContext.IN_GAME, KeyModifier.CONTROL, Keyboard.KEY_H, "key.categories.misc")
+    val SOUND_KEY = KeyBinding("key.sound", KeyConflictContext.IN_GAME, KeyModifier.CONTROL, Keyboard.KEY_S, "key.categories.misc")
 
     @Mod.EventHandler
     fun preInit(event: FMLPreInitializationEvent) {

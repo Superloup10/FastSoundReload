@@ -1,2 +1,3 @@
+debug.reload_sound.help=F3 + %s = Reload sound system
 debug.reload_sound.message=Reload sound system successful !
 key.sound=Reload sound system
